@@ -22,11 +22,14 @@ app.use('/api/v1/reviews', reviewRoute)
 
 
 
+app.get('/', (req, res) => res.send("API Working"));
 
 
 const PORT = process.env.PORT || 4000
-
+if (process.env.NODE_ENV !== "production") {
 app.listen(PORT, () => {
   connectDB()
   console.log("SERVER IS RUNNIG")
 })
+}
+export default app
