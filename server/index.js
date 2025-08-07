@@ -25,7 +25,7 @@ app.use('/api/v1/reviews', reviewRoute)
 app.get('/', (req, res) => res.send("API Working"));
 
 
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 5000
 if (process.env.NODE_ENV !== "production") {
 app.listen(PORT, () => {
   connectDB()
